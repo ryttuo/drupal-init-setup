@@ -23,11 +23,11 @@ fi
 
 
 #define dir path
-#DIR="~/drupal-init-setup"
+DIR='/root/drupal-init-setup'
 
 echo "Cloning drupal initial setup"
 rm -rf ~/drupal-init-setup
-git clone https://github.com/ryttuo/drupal-init-setup.git ~/drupal-initial-setup
+git clone https://github.com/ryttuo/drupal-init-setup.git $DIR
 exit
 
 if [ -d $DIR ]; then
