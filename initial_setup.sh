@@ -27,8 +27,7 @@ DIR="~/drupal-init-setup"
 
 echo "Cloning provisioning"
 rm -rf ~/drupal-init-setup
-git clone git@github.com:ryttuo/drupal-init-setup.git $DIR
-
+git clone https://github.com/ryttuo/drupal-init-setup.git $DIR
 exit
 
 if [ -d $DIR ]; then
