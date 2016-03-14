@@ -11,6 +11,9 @@ echo "-- @author Andrés Solano S <andres.solano@gmail.com>"
 echo "------------------------------------------------------------------------------"
 echo ""
 
+#reset terminal for weird characters
+reset
+
 #define dir path
 DIR='/root/drupal-init-setup'
 
@@ -22,7 +25,7 @@ if [ -d $DIR ]; then
   echo "setup apache and drupal"
   cd $DIR
   cp -r data /home/vagrant
-  #rm -r $DIR
+  rm -r $DIR
 
   #apache setup
   rm /etc/apache2/sites-enabled/*
