@@ -11,17 +11,6 @@ echo "-- @author Andrés Solano S <andres.solano@gmail.com>"
 echo "------------------------------------------------------------------------------"
 echo ""
 
-if [ ! -d ~/provision ]; then
-  echo ""
-  echo ""
-  echo ""
-  echo "Initializing..."
-  apt-get update
-  apt-get install -y -V git
-  ssh -oStrictHostKeyChecking=no -T git@github.com
-fi
-
-
 #define dir path
 DIR='/root/drupal-init-setup'
 
