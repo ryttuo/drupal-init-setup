@@ -41,6 +41,13 @@ if [ -d $DIR ]; then
   drush site-install minimal --account-name=admin --account-pass=admin --db-url=mysql://root:123456@localhost/news -y
   drush en aggregator contact dashboard field_ui file help image list number options menu path taxonomy -y
   drush en ctools memcache views views_ui features -y
+
+  #activate memcache
+  cd /home/vagrant/data
+  chmod 644 instances/news/sites/default/settings.php
+  cat memcached-data.inc >> instances/news/sites/default/settings.php
+  chmod 0444 instances/news/sites/default/settings.php
+  rm memcached-data.inc
 else
   echo "Unable to setup the machine. Provision directory not found"
 fi
