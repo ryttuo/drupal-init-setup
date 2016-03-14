@@ -26,9 +26,8 @@ fi
 DIR='/root/drupal-init-setup'
 
 echo "Cloning drupal initial setup"
-rm -rf ~/drupal-init-setup
+rm -rf $DIR
 git clone https://github.com/ryttuo/drupal-init-setup.git $DIR
-exit
 
 if [ -d $DIR ]; then
   echo "setup apache and drupal"
